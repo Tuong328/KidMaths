@@ -1,4 +1,3 @@
-//"Sally has %%x: 1,5%% Apples, she gets %%y: 2,3%% more, how many does she have now?"
 
 var scoreCount = 0;
 
