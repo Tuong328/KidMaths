@@ -1,4 +1,4 @@
-# Test2020
+# KidMaths 2020
 KidMaths: Helping teachers, students, and polar bears with math since 2020;
 Click on polarbear for information to save the world!
 
