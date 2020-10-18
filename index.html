@@ -39,17 +39,19 @@
                 <br>
                 </p>
                 <label>Input Problem</label>
-                <form onsubmit="return createProblem()">  
+                <form onsubmit="return storeProblem()">  
                     
                     <textarea class = text2 id="inputProblem" name="inputProblem" rows="5" cols="35"></textarea>
+                    
+                    <br>
+
+                    <label>Input Solution</label>
+                    <input type="text" id="inputSolution" name="inputSolution" style="width:414px;" class = text2>  
+
                     <input type="submit" value="Submit" >    
                     <input type="reset" value="Clear">
                     
                 </form>
-
-                <label>Input Solution</label>
-                <input type="text" id="inputSolution" name="inputSolution" style="width:414px;" class = text2>  
-                
                 
             </div>
 

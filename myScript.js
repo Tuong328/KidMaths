@@ -1,5 +1,7 @@
+//"Sally has %%x: 1,5%% Apples, she gets %%y: 2,3%% more, how many does she have now?"
 
 var scoreCount = 0;
+var problem1Holder;
 
 function getInput() {
     var userInput = document.getElementById("inputProblem").value;
@@ -15,12 +17,20 @@ function getSolution() {
 
 var solution;
 function createProblem() {
-    var problem1 = new Problem(getInput(), getSolution());
-    var prob = problem1.genRandomProblem();
+    
+    var prob = problem1Holder.genRandomProblem();
     document.getElementById("myTextArea").innerHTML = prob.problemString;
 
     console.log(prob.solution);
     solution = prob.solution;
+
+    return false;
+}
+
+function storeProblem() {
+    problem1Holder = new Problem(getInput(), getSolution());
+    createProblem();
+    document.getElementById("inputSolution").value = "";
     return false;
 }
 
@@ -38,6 +48,7 @@ function enterAnswer() {
     }
     score += scoreCount;
     document.getElementById("score").innerHTML = score;
+    document.getElementById("answer").value = "";
     return false;
 }
 
