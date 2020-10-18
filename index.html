@@ -1,1 +1,78 @@
-"Hello World"
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <meta content="text/html;charset=utf-8" http-equiv="Content-Type"> 
+        <meta content="utf-8" http-equiv="encoding">
+        <title>KidMaths</title>
+        <link rel="stylesheet" href="styles.css">
+        <script src="myScript.js"></script>
+    </head>
+    <body>
+        <div class="top">
+            <a href="https://oceanservice.noaa.gov/ocean/earthday.html">
+                <img src="https://images-na.ssl-images-amazon.com/images/I/51vjYV0E8QL._AC_SL1129_.jpg" alt="polarbear" style="width:400px;height:500px;">
+            </a>
+            <header class="head">KidMaths</header>
+        </div>
+        
+        <section>
+            <div class = "leftSide">
+                <p style="font-family: Arial">
+                <b>How To Use:</b>
+                <li>In a math question, when you want a range of numbers put "%%variableName: low, high%%"</li>
+                <li>Example: %%x: 9,10%%</li>
+                <li>To calculate your answer, in the second text box, simply add the formula for your problem. </li>
+                <li>For example, if your variables are "x" and "y" and you have an addition problem, put x+y in the second textbox.</li>
+
+                <br>
+                <b>Example Input:</b>
+                <li>What is the area of a rectangle of width: %%width: 3, 5%% and height: %%height: 6, 9%%</li>
+                <li>Sally has %%x: 1,5%% apples, she gets %%y: 2,3%% more, how many does she have now?</li>
+               
+                <br>
+                <b>Example Output:</b>
+                <li>What is the area from width: 3 and height: 6</li>
+                <li>Sally has 4 apples, she gets 2 more, how many does she have now?</li>
+                <br>
+                <br>
+                <br>
+                </p>
+                <label>Input Problem</label>
+                <form onsubmit="return createProblem()">  
+                    
+                    <textarea class = text2 id="inputProblem" name="inputProblem" rows="5" cols="35"></textarea>
+                    <input type="submit" value="Submit" >    
+                    <input type="reset" value="Clear">
+                    
+                </form>
+
+                <label>Input Solution</label>
+                <input type="text" id="inputSolution" name="inputSolution" style="width:414px;" class = text2>  
+                
+                
+            </div>
+
+
+            <div class="question">
+
+                <textarea class = text1 id="myTextArea" name="myTextArea" rows="18" cols="15" readonly ></textarea>
+
+                <form onsubmit="return enterAnswer()" class="bot">
+                    <input type="text" id="answer" placeholder="enter answer" size="50" class = text1>
+                    <br>
+                    <br>
+                    <input type="submit" value="Submit">
+                </form>
+                    
+            </div>
+
+            <label id="score" class = score>Score: 0</label>
+
+        </section>
+        
+    </body>
+    
+    
+
+</html>
